@@ -1,4 +1,4 @@
-# upbos知识库概述
+# 概述
 knowledge-repository是一个共享知识库，主要记录软件开发过程中的踩坑过程，服务于开源社区的coder，让兄弟们少走冤枉路。
 ## 目录
 ### redis
