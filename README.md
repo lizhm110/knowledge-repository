@@ -7,6 +7,7 @@ knowledge-repository是一个共享知识库，主要记录软件开发过程中
 ### nginx
 - [nginxh环境搭建过程](./nginx/nginx环境搭建.md)
 ### es
+- [Elasticsearch环境搭建过程](./es/es环境搭建.md)
 ### elk
 - [ELK环境搭建过程](./elk/ELK环境搭建记录.md)
 
