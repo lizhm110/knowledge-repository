@@ -51,8 +51,14 @@ path.data: /alidata1/es-data/es-data1
 path.logs: /alidata1/es-data/logs/es-log/
 # 修改节点绑定ip
 network.host: 192.168.1.211
-# 修改对外端口
+# 设置对外服务的http端口，默认为9200。
+# 该端口是用来让HTTP REST API来访问ElasticSearch（如浏览器访问）
 http.port: 9201
+# 设置节点之间交互的tcp端口，默认是9300。
+# 该端口是传输层监听的默认端口，主要用来程序访问数据传输的时候访问
+transport.tcp.port: 9301
+# 每个节点这个参数一定要配置，只有配置了，节点之间才能互通，并且保证每个节点访问都能正确匹配到数据，同时还能保证节点创建索引之后不报yellow状态。
+discovery.zen.ping.unicast.hosts: ["192.168.1.211:9302", "192.168.1.211:9303"]
 ```
 
 复制elasticsearch-6.0.0-1/config/elasticsearch.yml到另外两个节点：
